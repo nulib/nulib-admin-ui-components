@@ -1,0 +1,33 @@
+{
+  "name": "nulib-admin-ui-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "styleguidist server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-emotion": "^10.0.33",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-styleguidist": "^11.0.5",
+    "webpack": "^4.42.1"
+  }
+}
