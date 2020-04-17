@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+
+button.button {
+  border-radius: 2px;
+}
