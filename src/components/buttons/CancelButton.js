@@ -1,5 +1,4 @@
 import React from "react";
-import "./button.scss";
 
 const CancelButton = (props) => {
   return (
