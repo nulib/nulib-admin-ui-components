@@ -55,5 +55,6 @@
     ">0.25%",
     "not ie 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "https://nulib.github.io/nulib-admin-ui-components/"
 }
