@@ -1,4 +1,4 @@
-# NU Lib Admin UI Components Repository and Style Guide
+# Northwestern Libraries Admin Component Repository
 
 A collection of Northwestern University Libraries React components, used cross-projects for creating Admin UI interfaces. Also included is a Style Guide via Styleguidist.
 
