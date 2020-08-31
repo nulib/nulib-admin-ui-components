@@ -1,18 +1,13 @@
 {
-  "presets": [
+  "presets": ["@babel/preset-react", "@babel/preset-env"],
+  "plugins": [
+    // Need runtime here to handle async await
     [
-      "@babel/preset-env",
+      "@babel/plugin-transform-runtime",
       {
-        "corejs": 3,
-        "useBuiltIns": "usage"
-      }
-    ],
-    [
-      "@babel/preset-react",
-      {
-        "useBuiltIns": true
+        "helpers": true,
+        "regenerator": true
       }
     ]
-  ],
-  "plugins": [["module-resolver", { "root": ["./src"] }]]
+  ]
 }

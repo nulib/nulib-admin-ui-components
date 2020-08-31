@@ -1,13 +1,23 @@
-// Theme reference
-// https://github.com/styleguidist/react-styleguidist/blob/master/src/client/styles/theme.ts
+const path = require("path");
 
 module.exports = {
-  theme: {
-    color: {
-      // base: "#fff",
-      // sidebarBackground: "#401f68",
-      // link: "#fff",
-      // linkHover: "#e4e0ee",
+  skipComponentsWithoutExample: true,
+  styleguideDir: "docs",
+  webpackConfig: {
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+              plugins: ["@babel/transform-runtime"],
+            },
+          },
+        },
+      ],
     },
   },
 };
