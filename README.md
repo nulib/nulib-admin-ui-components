@@ -12,10 +12,10 @@ Add the package to your React project:
 
 ```
 # Yarn
-yarn add https://nulib.github.io/admin-react-components
+yarn add @nulib/admin-react-components
 
 #NPM
-npm install --save https://nulib.github.io/admin-react-components
+npm install --save @nulib/admin-react-components
 ```
 
 ## Developing
@@ -23,8 +23,8 @@ npm install --save https://nulib.github.io/admin-react-components
 To work on the component repository:
 
 1. Clone the project
-2. `cd` into `admin-react-components` directory
-3. Install all dependencies with either `yarn` or `npm`:
+2. Enter the `admin-react-components` directory: `cd admin-react-components`
+3. Install dependencies
 
 ```
 # Yarn
@@ -34,13 +34,13 @@ yarn install
 npm install
 ```
 
-Develop components within the Styleguidist application environemnt. Run:
+We use Styleguidist's for development. Run:
 
 ```
 yarn styleguide
 ```
 
-which will spin up a local Styleguidist development server that does live-reloading.
+which will spin up a local Styleguidist webpack dev server that handles live-reloading as you build out components.
 
 ## Running the tests
 
