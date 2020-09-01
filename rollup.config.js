@@ -1,19 +1,16 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
+import cleaner from "rollup-plugin-cleaner";
+import copy from "rollup-plugin-copy";
 import replace from "@rollup/plugin-replace";
 import pkg from "./package.json";
 import { terser } from "rollup-plugin-terser";
 
-import react from "react";
-import reactDom from "react-dom";
-
 const NODE_ENV = "production";
 
-// CommonJS (for Node) and ES module (for bundlers) build.
 let productionRollup = {
   input: "src/main.js",
-
   output: [
     { file: pkg.main, format: "cjs" },
     {
@@ -38,16 +35,33 @@ let productionRollup = {
     ...Object.keys(pkg.peerDependencies || {}),
   ],
   plugins: [
-    replace({
-      "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
-    }),
     babel({
       babelHelpers: "runtime",
       babelrc: true,
       exclude: "node_modules/**",
     }),
-    resolve(), // tells Rollup how to find packages in node_modules
-    commonjs(), // converts node_modules packages to ES modules
+    cleaner({
+      targets: ["./dist/"],
+    }),
+    copy({
+      targets: [
+        {
+          // Common NUL Admin style (CSS/Sass) files get copied to the
+          // distributed bundle to re-use across any NUL application
+          src: [
+            "src/styles/_variables.scss",
+            "src/styles/_fonts.scss",
+            "src/styles/fonts",
+          ],
+          dest: "dist/public/styles",
+        },
+      ],
+    }),
+    replace({
+      "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
+    }),
+    resolve(),
+    commonjs(),
   ],
 };
 

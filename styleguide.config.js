@@ -1,8 +1,8 @@
 const path = require("path");
 
 module.exports = {
+  require: [path.join(__dirname, "src/base.scss")],
   skipComponentsWithoutExample: true,
-  styleguideDir: "docs",
   webpackConfig: {
     module: {
       rules: [
@@ -16,6 +16,17 @@ module.exports = {
               plugins: ["@babel/transform-runtime"],
             },
           },
+        },
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            // Creates `style` nodes from JS strings
+            "style-loader",
+            // Translates CSS into CommonJS
+            "css-loader",
+            // Compiles Sass to CSS
+            "sass-loader",
+          ],
         },
       ],
     },
