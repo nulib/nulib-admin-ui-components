@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Buttons.module.scss";
 
 const Button = ({ children, isDanger, ...passThruProps }) => {
   return (

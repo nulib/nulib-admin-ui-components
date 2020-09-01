@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Buttons.module.scss";
 
 const PrimaryButton = ({ children, ...passThruProps }) => {
   return (
