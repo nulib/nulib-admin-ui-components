@@ -154,11 +154,23 @@ var ReactIs, throwOnDirectAccess; {
 
 var Button = function Button(_ref) {
   var children = _ref.children,
+      isCancel = _ref.isCancel,
       isDanger = _ref.isDanger,
-      passThruProps = objectWithoutProperties(_ref, ["children", "isDanger"]);
+      isPrimary = _ref.isPrimary,
+      passThruProps = objectWithoutProperties(_ref, ["children", "isCancel", "isDanger", "isPrimary"]);
+
+  var btnClass = "";
+
+  if (isCancel) {
+    btnClass = "is-text";
+  } else if (isDanger) {
+    btnClass = "is-danger";
+  } else if (isPrimary) {
+    btnClass = "is-primary";
+  }
 
   return /*#__PURE__*/React.createElement("button", _extends_1({
-    className: "button ".concat(isDanger ? "is-danger" : "")
+    className: "button ".concat(btnClass)
   }, passThruProps), children);
 };
 
@@ -166,31 +178,19 @@ Button.propTypes = {
   /** Button label */
   children: propTypes.node.isRequired,
 
+  /** Cancel button */
+  isCancel: propTypes.bool,
+
   /** Indicates destructive action to follow */
-  isDanger: propTypes.bool
+  isDanger: propTypes.bool,
+
+  /** Primary call to action button */
+  isPrimary: propTypes.bool
 };
 Button.defaultProps = {
-  isDanger: false
+  isCancel: false,
+  isDanger: false,
+  isPrimary: false
 };
 
-var PrimaryButton = function PrimaryButton(_ref) {
-  var children = _ref.children,
-      passThruProps = objectWithoutProperties(_ref, ["children"]);
-
-  return /*#__PURE__*/React.createElement("button", _extends_1({
-    className: "button is-primary"
-  }, passThruProps), children);
-};
-
-PrimaryButton.propTypes = {
-  /** Button label */
-  children: propTypes.node.isRequired
-};
-
-var CancelButton = function CancelButton(props) {
-  return /*#__PURE__*/React.createElement("button", _extends_1({
-    className: "button is-text"
-  }, props), "Cancel");
-};
-
-export { Button, CancelButton, PrimaryButton };
+export { Button };

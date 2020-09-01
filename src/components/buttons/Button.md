@@ -1,11 +1,15 @@
-A plain button. React component `props`, or element `attributes` will be passed through to all Buttons.
+A button. React component `props`, or element `attributes` will be passed through to the Button component.
+
+When writing tests in your apps, you can pass through a testing handle attribute like `data-testid="buttom-form-submit"` to the component.
 
 ```js static
-import { Button } from "nulib-admin-ui-components";
+import { Button } from "@nulib/admin-react-components";
 ```
 
 ```jsx padded
+<Button data-testid="button-collection-edit">Standard button</Button>
 <Button onClick={() => alert("Button clicked")}>Click me</Button>
-<Button data-testid="button-collection-edit">Tested Button</Button>
+<Button isPrimary>Primary Button</Button>
 <Button isDanger>Delete Collection</Button>
+<Button isCancel>Cancel</Button>
 ```
