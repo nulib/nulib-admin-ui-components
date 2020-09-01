@@ -44,7 +44,12 @@ which will spin up a local Styleguidist webpack dev server that handles live-rel
 
 ## Running the tests
 
-...coming soon
+```
+yarn test
+
+// or
+yarn test:watch
+```
 
 ## Building the package
 
