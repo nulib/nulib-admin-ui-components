@@ -1,29 +1,22 @@
 # Northwestern Libraries Admin Component Repository
 
-A collection of Northwestern University Libraries React components, used cross-projects for creating Admin UI interfaces. Also included is a Style Guide via Styleguidist.
+A collection of Northwestern University Libraries React components, used cross-projects for creating Admin UI interfaces. Style Guide via Styleguidist.
 
-## Usage
+## Style guide and examples
 
-View available components and how to import them in a React application: https://nulib.github.io/nulib-admin-ui-components/styleguide/
+View the styleguide and usage examples: https://nulib.github.io/nulib-admin-ui-components/styleguide/
 
-### Installing
+### Using the component library and assets
 
-Install the package to your React project via Github (for now) with `npm` or `yarn`:
+Add the package to your React project:
 
 ```
-npm install --save https://nulib.github.io/nulib-admin-ui-components
+# Yarn
 yarn add https://nulib.github.io/nulib-admin-ui-components
-```
 
-And import components:
-
+#NPM
+npm install --save https://nulib.github.io/nulib-admin-ui-components
 ```
-import { Button, PrimaryButton } from "nulib-admin-ui-components";
-...
-<PrimaryButton disabled>Disabled until form validated</PrimaryButton>
-```
-
-Imported components have their styling inlined, and will appear consistent across any consuming application.
 
 ## Developing
 
@@ -34,7 +27,10 @@ To work on the component repository:
 3. Install all dependencies with either `yarn` or `npm`:
 
 ```
+# Yarn
 yarn install
+
+# NPM
 npm install
 ```
 
@@ -44,22 +40,25 @@ Develop components within the Styleguidist application environemnt. Run:
 yarn styleguide
 ```
 
-Follow the instructions outputted from the above command for a `localhost` address to visit in your browser. The Style Guide will auto re-load as you build or update new components. If hot reloading appears not to be working, stop `Ctrl-C` and restart: `yarn styleduide`.
+which will spin up a local Styleguidist development server that does live-reloading.
 
 ## Running the tests
 
 ...coming soon
 
-## Deployment
+## Building the package
 
-To deploy updates to the component repo, make sure to commit all your changes, and run the following NPM commands (assuming `yarn` here):
+To build the package with Rollup
 
 ```
 yarn build
-yarn styleguide:build
 ```
 
-Then make a PR to the `master` branch.
+To build the latest version of the style guide:
+
+```
+yarn styleguide:build
+```
 
 ## ADR
 
@@ -92,7 +91,3 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-- https://medium.com/otorio/build-a-react-component-library-with-antd-and-styleguidist-5927931d62c6
