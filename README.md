@@ -1,10 +1,10 @@
-# Northwestern Libraries Admin Component Repository
+# Northwestern Libraries Admin React Components
 
-A collection of Northwestern University Libraries React components, used cross-projects for creating Admin UI interfaces. Style Guide via Styleguidist.
+A collection of Northwestern University Libraries React components, used cross-projects for creating Admin UI interfaces. Style guide via Styleguidist.
 
 ## Style guide and examples
 
-View the styleguide and usage examples: https://nulib.github.io/nulib-admin-ui-components/styleguide/
+View the styleguide and usage examples: https://nulib.github.io/admin-react-components/styleguide/
 
 ### Using the component library and assets
 
@@ -12,10 +12,10 @@ Add the package to your React project:
 
 ```
 # Yarn
-yarn add https://nulib.github.io/nulib-admin-ui-components
+yarn add https://nulib.github.io/admin-react-components
 
 #NPM
-npm install --save https://nulib.github.io/nulib-admin-ui-components
+npm install --save https://nulib.github.io/admin-react-components
 ```
 
 ## Developing
@@ -23,7 +23,7 @@ npm install --save https://nulib.github.io/nulib-admin-ui-components
 To work on the component repository:
 
 1. Clone the project
-2. `cd` into `nulib-admin-ui-components` directory
+2. `cd` into `admin-react-components` directory
 3. Install all dependencies with either `yarn` or `npm`:
 
 ```
