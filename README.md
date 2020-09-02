@@ -4,7 +4,9 @@ A collection of Northwestern University Libraries React components, used cross-p
 
 ## Style guide and examples
 
-View the styleguide and usage examples: https://nulib.github.io/admin-react-components/styleguide/
+View the style guide and usage examples:
+
+https://nulib.github.io/admin-react-components/styleguide/
 
 ### Using the component library and assets
 
@@ -14,13 +16,13 @@ Add the package to your React project:
 # Yarn
 yarn add @nulib/admin-react-components
 
-#NPM
+# NPM
 npm install --save @nulib/admin-react-components
 ```
 
 ## Developing
 
-To work on the component repository:
+To develop in the component repository:
 
 1. Clone the project
 2. Enter the `admin-react-components` directory: `cd admin-react-components`
@@ -34,13 +36,13 @@ yarn install
 npm install
 ```
 
-We use Styleguidist's for development. Run:
+Use Styleguidis for a development environment. Run:
 
 ```
 yarn styleguide
 ```
 
-which will spin up a local Styleguidist webpack dev server that handles live-reloading as you build out components.
+which will spin up a local Styleguidist webpack dev server that handles live-reloading as you write tests, build out components, and write documentation.
 
 ## Running the tests
 
@@ -53,13 +55,13 @@ yarn test:watch
 
 ## Building the package
 
-To build the package with Rollup
+To build the package, we use Rollup:
 
 ```
 yarn build
 ```
 
-To build the latest version of the style guide:
+To directly build the latest version of the style guide:
 
 ```
 yarn styleguide:build
