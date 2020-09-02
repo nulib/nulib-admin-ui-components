@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 
 const Button = ({
   children,
-  isCancel,
+  isText,
   isDanger,
   isPrimary,
   ...passThruProps
 }) => {
   let btnClass = "";
 
-  if (isCancel) {
+  if (isText) {
     btnClass = "is-text";
   } else if (isDanger) {
     btnClass = "is-danger";
@@ -29,14 +29,14 @@ Button.propTypes = {
   /** Button label */
   children: PropTypes.node.isRequired,
   /** Cancel button */
-  isCancel: PropTypes.bool,
+  isText: PropTypes.bool,
   /** Indicates destructive action to follow */
   isDanger: PropTypes.bool,
   /** Primary call to action button */
   isPrimary: PropTypes.bool,
 };
 Button.defaultProps = {
-  isCancel: false,
+  isText: false,
   isDanger: false,
   isPrimary: false,
 };

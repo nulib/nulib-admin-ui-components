@@ -52,7 +52,6 @@ let productionRollup = {
             "src/styles/_variables.scss",
             "src/styles/_base.scss",
             "src/styles/_fonts.scss",
-            "src/styles/fonts",
           ],
           dest: "dist/public/styles",
         },

@@ -10,6 +10,6 @@ import { Button } from "@nulib/admin-react-components";
 <Button data-testid="button-collection-edit">Standard button</Button>
 <Button onClick={() => alert("Button clicked")}>Click me</Button>
 <Button isPrimary>Primary Button</Button>
-<Button isDanger>Delete Collection</Button>
-<Button isCancel>Cancel</Button>
+<Button isDanger>Dangerous Button</Button>
+<Button isText>Cancel</Button>
 ```
