@@ -50,6 +50,7 @@ let productionRollup = {
           // distributed bundle to re-use across any NUL application
           src: [
             "src/styles/_variables.scss",
+            "src/styles/_base.scss",
             "src/styles/_fonts.scss",
             "src/styles/fonts",
           ],
