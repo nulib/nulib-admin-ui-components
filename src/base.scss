@@ -1,3 +1,11 @@
 @import "styles/variables";
-@import "~bulma/bulma";
+
+// Import only what we need from Bulma
+// Importing the entire package causes some buggy behavior on Styleguidist's output
+@import "~bulma/sass/utilities/all";
+@import "~bulma/sass/base/all";
+@import "~bulma/sass/helpers/all";
+@import "~bulma/sass/elements/button";
+
+// Custom base Northwestern Admin Component styles
 @import "styles/base";
