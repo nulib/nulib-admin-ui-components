@@ -27,7 +27,7 @@ describe("Button component", () => {
   });
 
   it("renders a Cancel button", () => {
-    const { getByText } = render(<Button isCancel>Cancel button</Button>);
+    const { getByText } = render(<Button isText>Cancel button</Button>);
     expect(getByText(/cancel button/i)).toHaveClass("is-text");
   });
 
@@ -35,5 +35,10 @@ describe("Button component", () => {
     const { getByText } = render(<Button isDanger>Danger button</Button>);
 
     expect(getByText(/danger button/i)).toHaveClass("is-danger");
+  });
+
+  it("renders a Light button", () => {
+    const { getByText } = render(<Button isLight>Secondary button</Button>);
+    expect(getByText(/secondary button/i)).toHaveClass("is-light");
   });
 });

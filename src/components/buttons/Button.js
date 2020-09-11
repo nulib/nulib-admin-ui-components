@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 
 const Button = ({
   children,
-  isText,
+  className,
   isDanger,
+  isLight,
   isPrimary,
+  isText,
   ...passThruProps
 }) => {
   let btnClass = "";
@@ -16,7 +18,11 @@ const Button = ({
     btnClass = "is-danger";
   } else if (isPrimary) {
     btnClass = "is-primary";
+  } else if (isLight) {
+    btnClass = "is-light";
   }
+
+  btnClass = `${btnClass} ${className || ""}`;
 
   return (
     <button className={`button ${btnClass}`} {...passThruProps}>
@@ -28,17 +34,23 @@ const Button = ({
 Button.propTypes = {
   /** Button label */
   children: PropTypes.node.isRequired,
-  /** Cancel button */
-  isText: PropTypes.bool,
+  /** Extra classes */
+  className: PropTypes.string,
   /** Indicates destructive action to follow */
   isDanger: PropTypes.bool,
+  /** Light, secondary button */
+  isLight: PropTypes.bool,
   /** Primary call to action button */
   isPrimary: PropTypes.bool,
+  /** Text button */
+  isText: PropTypes.bool,
 };
 Button.defaultProps = {
-  isText: false,
+  className: "",
   isDanger: false,
+  isLight: false,
   isPrimary: false,
+  isText: false,
 };
 
 export default Button;
