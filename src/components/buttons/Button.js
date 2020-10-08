@@ -8,6 +8,7 @@ const Button = ({
   isLight,
   isPrimary,
   isText,
+  type,
   ...passThruProps
 }) => {
   let btnClass = "";
@@ -25,7 +26,7 @@ const Button = ({
   btnClass = `${btnClass} ${className || ""}`;
 
   return (
-    <button className={`button ${btnClass}`} {...passThruProps}>
+    <button className={`button ${btnClass}`} type={type} {...passThruProps}>
       {children}
     </button>
   );
@@ -44,6 +45,8 @@ Button.propTypes = {
   isPrimary: PropTypes.bool,
   /** Text button */
   isText: PropTypes.bool,
+  /** Type of button */
+  type: PropTypes.string,
 };
 Button.defaultProps = {
   className: "",
@@ -51,6 +54,7 @@ Button.defaultProps = {
   isLight: false,
   isPrimary: false,
   isText: false,
+  type: "button",
 };
 
 export default Button;
