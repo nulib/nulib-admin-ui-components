@@ -8,6 +8,7 @@ const Tag = ({
   isDanger,
   isInfo,
   isPrimary,
+  isSuccess,
   isWarning,
   ...restProps
 }) => {
@@ -17,6 +18,7 @@ const Tag = ({
         "is-danger": isDanger,
         "is-info": isInfo,
         "is-primary": isPrimary,
+        "is-success": isSuccess,
         "is-warning": isWarning,
       })}
       {...restProps}
@@ -37,6 +39,8 @@ Tag.propTypes = {
   isInfo: PropTypes.bool,
   /** Primary color tag */
   isPrimary: PropTypes.bool,
+  /** Success tag */
+  isSuccess: PropTypes.bool,
   /** Warning  */
   isWarning: PropTypes.bool,
 };
@@ -45,6 +49,7 @@ Tag.defaultProps = {
   isDanger: false,
   isInfo: false,
   isPrimary: false,
+  isSuccess: false,
   isWarning: false,
 };
 

@@ -12,4 +12,5 @@ import { Tag } from "@nulib/admin-react-components";
 <Tag isWarning>Unpublished</Tag>
 <Tag isInfo>General info</Tag>
 <Tag isPrimary>Primary</Tag>
+<Tag isSuccess>Completed</Tag>
 ```
