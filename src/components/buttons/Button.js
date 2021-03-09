@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const Button = ({
   children,
@@ -9,24 +10,19 @@ const Button = ({
   isPrimary,
   isText,
   type,
-  ...passThruProps
+  ...restProps
 }) => {
-  let btnClass = "";
-
-  if (isText) {
-    btnClass = "is-text";
-  } else if (isDanger) {
-    btnClass = "is-danger";
-  } else if (isPrimary) {
-    btnClass = "is-primary";
-  } else if (isLight) {
-    btnClass = "is-light";
-  }
-
-  btnClass = `${btnClass} ${className || ""}`;
-
   return (
-    <button className={`button ${btnClass}`} type={type} {...passThruProps}>
+    <button
+      className={classNames(["button", ...className], {
+        "is-text": isText,
+        "is-danger": isDanger,
+        "is-primary": isPrimary,
+        "is-light": isLight,
+      })}
+      type={type}
+      {...restProps}
+    >
       {children}
     </button>
   );

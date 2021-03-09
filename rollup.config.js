@@ -27,6 +27,7 @@ let productionRollup = {
         react: "React",
         "react-dom": "ReactDOM",
         "@emotion/core": "core",
+        classnames: "classNames",
       },
     },
   ],
@@ -59,6 +60,7 @@ let productionRollup = {
     }),
     replace({
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
+      preventAssignment: true,
     }),
     resolve(),
     commonjs(),
