@@ -14,7 +14,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={classNames(["button", ...className], {
+      className={classNames(["button", className], {
         "is-text": isText,
         "is-danger": isDanger,
         "is-primary": isPrimary,

@@ -9,7 +9,7 @@ import { Button } from "@nulib/admin-react-components";
 ```jsx padded
 <Button data-testid="button-collection-edit">Standard button</Button>
 <Button onClick={() => alert("Button clicked")}>Click me</Button>
-<Button isPrimary className="adam">Primary Button</Button>
+<Button isPrimary>Primary Button</Button>
 <Button isDanger>Dangerous Button</Button>
 <Button isLight>Secondary Button</Button>
 <Button isText>Cancel</Button>
