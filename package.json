@@ -1,6 +1,6 @@
 {
   "name": "@nulib/admin-react-components",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "",
   "main": "dist/admin-react-components.cjs.js",
   "module": "dist/admin-react-components.esm.js",
