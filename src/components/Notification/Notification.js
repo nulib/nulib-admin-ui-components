@@ -1,42 +1,60 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
-const Notification = ({ children, className, ...props }) => (
-  <p {...props} className={`notification ${props}`}>
-    <button className="delete"></button>
-    {children}
-  </p>
-);
-
-let notificationClass = "";
-
-if (isText) {
-  notificationClass = "is-text";
-} else if (isDanger) {
-  notificationClass = "is-danger";
-} else if (isPrimary) {
-  notificationClass = "is-primary";
-} else if (isLight) {
-  notificationClass = "is-light";
-}
+const Notification = ({
+  children,
+  className,
+  isCentered,
+  isDanger,
+  isInfo,
+  isPrimary,
+  isSuccess,
+  isWarning,
+  ...restProps
+}) => {
+  return (
+    <div
+      className={classNames(["notification", "is-light", ...className], {
+        "is-danger": isDanger,
+        "is-info": isInfo,
+        "is-primary": isPrimary,
+        "is-success": isSuccess,
+        "is-warning": isWarning,
+        "has-text-centered": isCentered,
+      })}
+      {...restProps}
+    >
+      {children}
+    </div>
+  );
+};
 
 Notification.propTypes = {
-  /** Button label */
+  /** Notification content */
   children: PropTypes.node.isRequired,
   /** Extra classes */
   className: PropTypes.string,
-  /** Danger notification */
+  /** Center notification content */
+  isCentered: PropTypes.bool,
+  /** Danger tag */
   isDanger: PropTypes.bool,
-  /** Warning notification */
-  isWarning: PropTypes.bool,
-  /** Info notification */
+  /** General, informational tag */
   isInfo: PropTypes.bool,
+  /** Primary color tag */
+  isPrimary: PropTypes.bool,
+  /** Success tag */
+  isSuccess: PropTypes.bool,
+  /** Warning  */
+  isWarning: PropTypes.bool,
 };
 Notification.defaultProps = {
   className: "",
   isDanger: false,
-  isWarning: false,
   isInfo: false,
+  isPrimary: false,
+  isSuccess: false,
+  isWarning: false,
 };
 
 export default Notification;
